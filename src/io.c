@@ -1,0 +1,34 @@
+#include "io.h"
+
+queue qinit() {
+    queue out = {malloc(sizeof(int)*2), 2, 0, 0};
+    return out;
+}
+
+int get(queue* code) {
+    code -> cur++;
+    return code -> data[code -> cur - 1];
+}
+
+void push(queue* code, int data) {
+    if (code -> dsize >= code -> msize/2) {
+        int* new = malloc(sizeof(int)*code -> msize*2);
+        for(int i = 0; i<code -> dsize, i++) {
+            new[i] = code -> data[i];
+        }
+        free(code -> data);
+        code -> data = new;
+    }
+    else {
+        code -> data[code -> dsize] = data;
+        code -> dsize++;    
+    }
+    return;
+}
+
+int progload(FILE* prog, char* name, queue* code) {
+    if (prog = fopen(name, "r") == NULL) return _OPENFAIL;
+    int data;
+    while(fscanf(prog, "%d", data) != EOF) push(code, data);
+    return 0;
+}
