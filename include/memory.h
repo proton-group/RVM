@@ -6,7 +6,11 @@ struct reg {
     unsigned __int64 f[32];
 }
 
-
+reg reginit() {
+    reg new;
+    new.x[0] = 0;
+    return reg;
+}
 
 
 
