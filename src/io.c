@@ -26,6 +26,16 @@ void push(queue* code, int data) {
     return;
 }
 
+int search(queue mem, int data, int* num) {
+    for(int i = 0; i<mem.dsize; i++){
+        if(mem.data[i] == data) {
+            *num = i;
+            return 0;
+        }
+    }
+    return _SEARCHERROR;
+}
+
 int progload(FILE* prog, char* name, queue* code) {
     if (prog = fopen(name, "r") == NULL) return _OPENFAIL;
     int data;

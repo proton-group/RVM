@@ -3,15 +3,17 @@
 #include <stdio.h>
 #include "errorhandler.h"
 #include <stdlib.h>
-struct queue {
+typedef struct queue {
     int* data;
     size_t msize;
     size_t dsize;
     int cur;
-};
+} queue;
+
 queue qinit();
-int get(queue code);
-void push(queue code, int data);
-queue progload(FILE* prog, char* name);
+int get(queue* code);
+void push(queue* code, int data);
+int search(queue mem, int data, int* num);
+int progload(FILE* prog, char* name, queue* code);
 
 #endif

@@ -1,17 +1,15 @@
 #ifndef MEMORY_H
 #define MEMORY_H
 
-struct reg {
-    unsigned __int64 x[32];
-    unsigned __int64 f[32];
-}
+typedef struct reg {
+    unsigned long long x[32];
+    unsigned long long f[32];
+} reg;
 
-reg reginit() {
-    reg new;
-    new.x[0] = 0;
-    return reg;
-}
+reg reginit();
 
+int memload(int adress);
+int memsave(int adress, int data);
 
 
 #endif
