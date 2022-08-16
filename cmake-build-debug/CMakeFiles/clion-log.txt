@@ -1,0 +1,4 @@
+/home/anatoly/clion-2021.3.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/anatoly/clion-2021.3.2/bin/ninja/linux/ninja -G Ninja /home/anatoly/CLionProjects/asm
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/anatoly/CLionProjects/asm/cmake-build-debug

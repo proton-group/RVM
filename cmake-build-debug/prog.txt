@@ -1,0 +1,4 @@
+ADDI x10, x0, 12
+ADD x5, x0, x10
+SB x0, x5, x0, 14
+LB x4, x0, 14

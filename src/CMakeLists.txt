@@ -1,0 +1,1 @@
+add_library(bor bor.c instruction.c translator.c system_parse.c)
